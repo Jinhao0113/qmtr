@@ -1,0 +1,46 @@
+% The set of wavefunctions form a vector space. This means that if $\psi_1(\mathbf{x},t)$ and $\psi_2(\mathbf{x},t)$ are both possible states of the system, then so too is
+ 波函数的结合构成一个矢量空间。 如果$\psi_1(\mathbf{x},t)$和$\psi_2(\mathbf{x},t)$都是系统的可能状态，那么系统状态也可能是
+\[
+    \psi_3(\mathbf{x},t)=\alpha\psi_1(\mathbf{x},t) +\beta\psi_2(\mathbf{x},t) 
+\]
+% for any $\alpha, \beta \in \mathbf{C}$. This is known as the \textit{principle of superposition}.\par
+对于任意$\alpha, \beta \in \mathbf{C}$成立，这被称作\textit{叠加原理}.\par
+% The mathematics underlying this statement is simple. If $\psi_1$ and $\psi_2$ are states of the system then both must be normalisable. They may, indeed, be normalised but for now let’s just assume that
+这句话背后的数学原理非常简单。 如果$\psi_1$ 和$\psi_2$ 都是系统的状态，那它们必须是归一化的。 他们可能确实是归一化的，但我们现在在这里就假设
+\[
+    \int \mathrm{d}^3 x|\psi_i(\mathbf{x},t)|^2=N_i<\infty \ \ \mathrm{for}\ i=1,2
+\]
+% Then $\psi_3$ is also a possible state of the system provided that it too is normalisable. But it is straightforward to show that it has this property. First we have
+那么$\psi_3$ 同样也是一个系统可能的状态，只要它是可归一化的。 这个性质很容易证明，首先有
+\[
+\int \mathrm{d}^3 x|\psi_3|^2=\int\mathrm{d}^3 x|\alpha\psi_1+\beta\psi_2|^2\le\int\mathrm{d}^3x \left(|\alpha\psi_1|+|\beta\psi_2|\right)^2
+\]
+% where we’ve used the triangle inequality $|z_1 + z_2| \le |z_1| + |z_2|$ for any $z_1, z_2 \in \mathbf{C}$. Continuing, we have
+这里我们使用了三角不等式 $|z_1 + z_2| \le |z_1| + |z_2|$ 对于任意 $z_1, z_2 \in \mathbf{C}$. 继续, 我们有
+\[
+\int \mathrm{d}^3 x|\psi_3|^2\le\int \mathrm{d}^3 x\left(|\alpha\psi_1|^2+|\beta\psi_2|^2+2|\alpha\psi_1||\beta\psi_2| \right)\le\int \mathrm{d}^3 x\left(2|\alpha\psi_1|^2+2|\beta\psi_2|^2\right)
+\]
+% where, now, in the last step we’ve used the fact that $(|z_1|−|z_2|)^2 \ge 0$ which, rearranging, gives $2|z_1||z_2| \le |z_1|^2 + |z_2|^2$. So, finally, we get the result we wanted     
+接下去，最后一步我们用了 $(|z_1|−|z_2|)^2 \ge 0$ 可以得到$2|z_1||z_2| \le |z_1|^2 + |z_2|^2$. 最后我们得到了我们想要的
+\[
+\int \mathrm{d}^3 x|\psi_3|^2\le 2|\alpha|^2N_1+2|\beta|^2 N_2<\infty
+\]
+% We learn that $\psi_3$ is normalisable, and hence also an allowed state of the system.\par
+ 现在我们知道$\psi_3$ 是可归一化的，所以这也是系统允许态。\par
+% The idea that functions form a vector space might be novel. There is a simple notational trick that should help convince you that it’s not too far from things you’ve seen already. If we have some n-dimensional vector$\vec{y}$  then we often use subscript notation and write it as $y_i$ with $i = 1,\dots,N$ . We could equally well write it as $y(i)$ with $i = 1,\dots,N$ . A function $y(x)$ is a similar kind of object, but now with a continuous label $x \in \mathbf{R}$ rather than the discrete label $i = 1,\dots,N$.\par
+波函数构成一个矢量空间的想法看上去非常新奇。 下面的一个技巧可以让你使这个东西看上去与你已知的东西相没那么远。 如果你有一个$n$维的矢量，我们将会将它写作我们约定的符号，如$y_i$ 其中 $i = 1,\dots,N$。 我们可以等价的将它写作$y(i)$ 其中 $i = 1,\dots,N$。函数 $y(x)$ 设类似的，只不过 $x \in \mathbf{R}$是连续的而不是像$i = 1,\dots,N$这样的离散指标.\par
+% Of course, the big difference is that we’re now dealing with an infinite dimensional vector space rather than a finite dimensional vector space, and I would be lying if I told you that this doesn’t bring new issues to the table. Indeed, we’ve already met one of them above: we don’t consider any old function $\psi(\mathbf{x})$ to be in our vector space, but rather only normalisable functions. There are many further subtleties in store but we will be best served by simply ignoring them at this point. We’ll return to some issues in Section 3.\par
+当然，现在我们处理的是无限维矢量空间，而不是有限维矢量空间， 但这并不会带来任何新的问题。 其实我们在上面已经遇见过了：在我们的矢量空间我们不考虑任何未归一化的函数$\psi(\mathbf{x})$而只考虑归一化的函数。 但其中还有很多微妙的地方在这里，我们暂时不处理。我们将在\S 3种讨论他们。\par
+% The principle of superposition has profound physical consequences. Suppose that you have a particle that, at some time $t_0$, you know is localised somewhere near the point $\mathbf{X}$. For example, we could describe it by the Gaussian wavefunction.
+叠加原理在物理中还有很多深远影响。 假如有一个粒子在$t_0$时刻，你知道他在 $\mathbf{X}$位置附近。 举个例子，你可以用高斯波函数来描述它。
+\[
+    \psi(\mathbf{x})=\dfrac{1}{\sqrt{N}}e^{-a(\mathbf{x}-\mathbf{X})^2}
+\]
+% for some choice of a that tells you how spread out the wavefunction is. Here $N$ is a normalisation factor that won’t concern us. (For what it’s worth, we should take $N = (\pi/2a)^{3/2}$ if we want to ensure that $\psi$ is normalised.) This is a state in which you might imagine that the particle still retains something of its classical particle nature, at least in the sense that the probability distribution is not spread out over long distances. However, the superposition principle tells us that we should also entertain the idea that the particle can sit in a state
+对于$a$的选择可以告诉你这个波的扩散程度。这里 $N$ 是一个归一化常数我们无需考虑它（其中$N = (\pi/2a)^{3/2}$，如果你想确定其是归一化的）在这种状态下，你可以想象粒子仍然保留了一些经典粒子的性质，至少概率分布没有在长距离上分散。然而，叠加原理告诉我们，我们还应该考虑粒子可以处于某种状态的想法
+\[
+    \psi(\mathbf{x})=\dfrac{1}{\sqrt{N'}}(e^{-a(\mathbf{x}-\mathbf{X_1})^2}+e^{-a(\mathbf{x}-\mathbf{X_2})^2})
+\]
+% for arbitrary positions $\mathbf{X_1}$ and $\mathbf{X_2}$. But now the cat is really out of the bag! The interpretation of this state is that the particle has somehow split and now sits both near $\mathbf{X_1}$ and near $\mathbf{X_2}$. Indeed, we’ll shortly see clear experimental consequences of states like the one above, where elementary particles – which are, as far as we can tell, indivisible – are coaxed into travelling along two or more different paths simultaneously. Taken to the logical extreme, it is states like the one above that lead us to seemingly paradoxical situations with cats that are both alive and dead.
+对于任意位置$\mathbf{X_1}$和$\mathbf{X_2}$。但是现在可以清楚了!对这种状态的解释是，粒子以某种方式分裂了，可以位于$\mathbf{X_1}$和$\mathbf{X_2}$附近。事实上，我们很快就会看到上述状态的清晰实验结果。据我们所知，经典粒子它们是不可分割的——它同时沿着两条或更多不同的路径运动。从极端情况考虑，正是像上面这样的状态导致了薛定谔猫的情况的出现。
+

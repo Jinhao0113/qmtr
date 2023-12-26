@@ -1,0 +1,40 @@
+% The probabilistic interpretation means that the wavefunction can't just be any old function. The particle has to be somewhere, and this translates to the requirement
+归一化后的函数将不与原来的波函数不同。它将转化为粒子在某位置的概率，这意味着
+\[
+\int \mathrm{d}^{3}xP(\mathbf{x},t)=\int\mathrm{d}^{3}x|\psi(\mathbf{x},t)|^{2}=1 
+\]
+% Wavefunctions that have this property are said to be \textit{normalised}.\par
+波函数的这一性质称之为\textit{归一化}\par
+% In practice, this isn't such a big deal. Suppose that we have a wavefunction $\psi(\mathbf{x},t)$ that isn't normalised but instead obeys
+这没什么大不了的。假设我们有一个波函数$\psi(\mathbf{x},t)$，它不是归一化的，而是服从的
+\[
+\int \mathrm{d}^{3}x|\Psi({\mathbf{x}},t)|^{2}=N<\infty 
+\]
+% If $N$ is finite we say that the wavefunction is \textit{normalisable}. Clearly a wavefunction is normalisable only if $\psi[{\mathbf{x}},t] \to 0$ sufficiently fast as $|\mathbf{x}|\to\infty$ In this case,we can always construct a normalised wavefunction
+如果$N$是有限的，那这个波函数就称之为\textit{可归一化的}. 显然一个波函数如果是可归一化的当且仅当在$|\mathbf{x}|\to\infty$时$\psi({\mathbf{x}},t) \to 0$。 在这种情况下，我们总是可以构造一个归一化的波函数。
+\[
+\psi(\mathbf{x},t)={\frac{1}{\sqrt{N}}}\Psi(\mathbf{x},t) 
+\]
+% Quite often in these lectures, it will turn out the be useful to work with un-normalised wavefunctions $\Psi$  and then remember to include the normalisation factor only at the end when computing probabilities.\par
+在本课程中，我们经常会发现用未归一化的波函数 $\Psi$ 是很有用的，只要记住在计算概率的时候，再将它归一化即可。\par
+% From the discussion above,it should be clear that we will have little use for wavefunctions that cannot be normalised because
+从上面的讨论中，我们可以得到无法归一化的波函数，只有一点用，因为
+\[
+\int \mathrm{d}^{3}x|\psi({\mathbf{x}},t)|^{2}=\infty 
+\]
+% These have no probabilistic interpretation and should be discarded. They do not describe quantum states.(I should warn you that this statement, while mostly true, comes with small and annoying caveat that will rear its head fairly soon. We will address this in Section 2.1.)\par
+这样的波函数没有概率解释。 他们也不表示任何量子态。(需要知道的是,这句话绝大多数情况下是正确的，但是我们将在\S 2.1中遇到反例).\par
+% There is one other relation between wavefunctions that is important: two wavefunctions that differ by a constant, complex phase should actually be viewed as describing equivalent states.
+波函数之间还有一个非常重要的关系，就是当两个波函数仅相差一个常数相位时，它们表示等价的状态.
+\[
+    \psi(\mathbf{x},t)\equiv e^{\mathbf{i}\alpha}\psi(\mathbf{x},t)
+\]
+% for any constant, real $\alpha$. Note, in particular, that this doesn’t change the probability distribution $P = |\psi|^2$. Nor, it will turn out, does it change anything else either. (The “anything else” argument is important here. As we’ll see later, if you multiplied the wavefunction by a spatially varying phase $e^{\mathbf{i}\alpha(\mathbf{x})}$ then it doesn’t change the probability distribution $P = |\psi|^2$ but it does change other observable quantities and so multiplying by such a factor does not give back the same state.)\par
+ 在多数情况下，实$\alpha$， 在一般情况下并不改变概率， 但是会改变一些别的东西（对“别的东西”的讨论在这里是很重要的。 我们将会看见，如果你给一个波函数乘上一个相位$e^{\mathbf{i}\alpha(\mathbf{x})}$  他并不会改变概率分布$P = |\psi|^2$ 但它会影响观测，所以并不会得到同一状态）\par
+% Combining the need for normalisation, together with the phase ambiguity, it is sometimes useful think of states as the collection of normalisable, complex functions with the equivalence relation
+结合归一化要求与对相位的不敏感性， 有时我们可以把态当作是一系列归一化的复函数的集合是十分有用的。
+\[
+    \psi(\mathbf{x},t)\equiv\lambda \psi(\mathbf{x},t)
+\]
+% for any complex $\lambda \in \mathbf{C}$ with $\lambda \ne 0$. The wavefunctions $\psi$ and $\lambda \psi$ should be viewed as describing the same physical state. 
+对于任何复数$\lambda \in \mathbf{C}$且$\lambda \ne 0$。波函数$\psi$和$\lambda \psi$应被视为描述相同的态。
